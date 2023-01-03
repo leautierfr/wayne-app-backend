@@ -1,0 +1,64 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NzI4NTQ3MzJ9.t1k_dCKHR9mRXNCV1Z4woNjhB2qw28-dnXUtBDZAo08
+
+### Songs Index
+GET http://localhost:3000/songs.json
+
+### Songs Create
+POST http://localhost:3000/songs.json
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+  "name": "Shoot Me Down",
+  "song_url": "https://www.youtube.com/watch?v=5txQ3Dl4xnY",
+  "album": "Tha Carter III",
+  "year": 2008,
+  "user_id": 1
+}
+
+### Songs Show
+GET http://localhost:3000/songs/17.json
+
+### Songs Update
+PATCH http://localhost:3000/songs/17.json 
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+  "user_id": "3"
+}
+
+### Songs Destroy 
+DELETE http://localhost:3000/songs/17.json
+
+### Users create
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "Amanda",
+  "email": "amanda@example.com",
+  "password": "password"
+  
+}
+
+### Sessions create
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "amanda@example.com",
+  "password": "password"
+}
+
+### Favorite create
+POST http://localhost:3000/favorites.json
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+  "song_id": 3
+}
+
+### Favorites Destroy
+DELETE http://localhost:3000/favorites/5.json
