@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NzI4NTQ3MzJ9.t1k_dCKHR9mRXNCV1Z4woNjhB2qw28-dnXUtBDZAo08
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzI4Njc1NzZ9.kdhLC89Afm62JxGFUNjeKfwKWhMPY_uBhLBbJRrcvAA
 
 ### Songs Index
 GET http://localhost:3000/songs.json
@@ -6,7 +6,7 @@ GET http://localhost:3000/songs.json
 ### Songs Create
 POST http://localhost:3000/songs.json
 Content-Type: application/json
-Authorization: Bearer {{jwt}}
+
 
 {
   "name": "Shoot Me Down",
@@ -22,10 +22,10 @@ GET http://localhost:3000/songs/17.json
 ### Songs Update
 PATCH http://localhost:3000/songs/17.json 
 Content-Type: application/json
-Authorization: Bearer {{jwt}}
+
 
 {
-  "user_id": "3"
+
 }
 
 ### Songs Destroy 
@@ -36,8 +36,8 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Amanda",
-  "email": "amanda@example.com",
+  "name": "Jimmy",
+  "email": "jimmy@example.com",
   "password": "password"
   
 }
@@ -47,7 +47,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "amanda@example.com",
+  "email": "jimmy@example.com",
   "password": "password"
 }
 
@@ -57,7 +57,7 @@ Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
 {
-  "song_id": 3
+  "song_id": 1
 }
 
 ### Favorites Destroy

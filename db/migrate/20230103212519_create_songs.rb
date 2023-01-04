@@ -5,7 +5,6 @@ class CreateSongs < ActiveRecord::Migration[7.0]
       t.string :song_url
       t.string :album
       t.integer :year
-      t.integer :user_id
 
       t.timestamps
     end

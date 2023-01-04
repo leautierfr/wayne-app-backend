@@ -5,12 +5,11 @@ class SongsController < ApplicationController
   end
 
   def create
-    song = Song.create(
+    song = Song.create!(
       name: params[:name],
       song_url: params[:song_url],
       album: params[:album],
       year: params[:year],
-      user_id: params[:user_id],
     )
     render json: song.as_json
   end
@@ -27,7 +26,6 @@ class SongsController < ApplicationController
       album: params[:album] || song.album,
       year: params[:year] || song.year,
       song_url: params[:song_url] || song.song_url,
-      user_id: params[:user_id] || song.user_id,
     )
     render json: song.as_json
   end
