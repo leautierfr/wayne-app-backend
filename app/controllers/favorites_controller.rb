@@ -13,4 +13,9 @@ class FavoritesController < ApplicationController
     favorite.destroy
     render json: { message: "Unfavorited" }
   end
+
+  def index
+    favorites = Favorite.all
+    render json: favorites.as_json
+  end
 end
