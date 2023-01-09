@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzI4Njc1NzZ9.kdhLC89Afm62JxGFUNjeKfwKWhMPY_uBhLBbJRrcvAA
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzMzODIzODV9.QW9zzgbJD5UQzIPcpPuTzuCUdwKFw2ktrKzx6H8suys
 
 ### Songs Index
 GET http://localhost:3000/songs.json
@@ -57,7 +57,7 @@ Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
 {
-  "song_id": 1
+  "song_id": 5
 }
 
 ### Favorites Destroy
