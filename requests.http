@@ -57,8 +57,11 @@ Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
 {
-  "song_id": 5
+  "song_id": 20
 }
 
 ### Favorites Destroy
 DELETE http://localhost:3000/favorites/5.json
+
+### Favorites Index
+GET http://localhost:3000/favorites.json
