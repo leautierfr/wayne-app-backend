@@ -1,24 +1,30 @@
-# README
+# Weezy Repository
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The Weezy Repository indexes Lil Wayne songs and provides convenient links for listening in order to lessen the burden on the Wayne fans and Wayne novices to track down his work. I decided to build this project when I was confronted with how few people knew about his mixtape.
 
-Things you may want to cover:
+This is the backend of the project, built with Ruby on Rails. It uses the bcrypt, jwt and rack-cors gems, which will automatically install when you run a bundle.
 
-* Ruby version
+## Installation
 
-* System dependencies
+Clone down the repository. Navigate to the project directory and run the following commands:
 
-* Configuration
+```bash
+bundle install
+rails db:create db:migrate db:seed
+```
 
-* Database creation
+## Usage
 
-* Database initialization
+In the repository, run the following commands:
 
-* How to run the test suite
+```bash
+rails server
 
-* Services (job queues, cache servers, search engines, etc.)
+You now have a functioning backend for Weezy Repository.
 
-* Deployment instructions
+You can test web requests as documented in the `requests.http` file.
 
-* ...
+## Roadmap
+
+The backend for Weezy Repository is feature-complete. Changes in the future would only be made to the seeds file to include more of Lil Wayne's discography. This is subject to change if I can find an api that would automate the process.
+```
