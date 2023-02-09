@@ -5,6 +5,8 @@ name: song.name,
 song_url: song.song_url,
 album: song.album,
 year: song.year,
-user_id: song.user_id
+user_id: song.user_id,
+created_at: song.created_at,
+updated_at: song.updated_at
 }
 end
