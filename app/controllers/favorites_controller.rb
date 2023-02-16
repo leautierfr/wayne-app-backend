@@ -2,11 +2,16 @@ require "pry"
 
 class FavoritesController < ApplicationController
   def index
-    favorites = Favorite.all
+    @favorites = Favorite.all
     if current_user
-      favorites = Favorite.where(user_id: current_user.id)
+      @favorites = Favorite.where(user_id: current_user.id)
     end
-    render json: favorites.as_json
+    render :index
+  end
+
+  def show
+    @favorite = Favorite.find_by(id: params[:id])
+    render :show
   end
 
   def create

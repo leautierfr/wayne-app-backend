@@ -17,4 +17,5 @@ Rails.application.routes.draw do
   post "/favorites" => "favorites#create"
   delete "/favorites/:id" => "favorites#destroy"
   get "/favorites" => "favorites#index"
+  get "/favorites/:id" => "favorites#show"
 end

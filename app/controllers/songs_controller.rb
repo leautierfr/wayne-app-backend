@@ -1,7 +1,7 @@
 class SongsController < ApplicationController
   def index
-    songs = Song.all
-    render json: songs.as_json
+    @songs = Song.all
+    render :index
   end
 
   def create
@@ -15,8 +15,8 @@ class SongsController < ApplicationController
   end
 
   def show
-    song = Song.find_by(id: params[:id])
-    render json: song.as_json
+    @song = Song.find_by(id: params[:id])
+    render :show
   end
 
   def update

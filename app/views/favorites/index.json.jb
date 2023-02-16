@@ -1,0 +1,9 @@
+@favorites.map do |favorite|
+{
+  id: favorite.id,
+  user_id: favorite.user_id,
+  song: favorite.song.name,
+  created_at: favorite.created_at,
+  updated_at: favorite.updated_at
+}
+end
